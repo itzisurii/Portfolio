@@ -1,10 +1,17 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  /* background: linear-gradient(to right, #2e3844, #748cab); */
+}
+
 header {
-  position: fixed;
-  z-index: 800;
+  position: absolute;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100vw;
-  background-color: rgba(204, 196, 196, 0.8);
 }
 
 .logo {
@@ -15,22 +22,334 @@ header {
   display: flex;
   justify-content: left;
   align-items: center;
-  /* padding: 3px; */
   padding-left: 1%;
   flex-wrap: wrap;
   gap: 900px;
+  background: rgba(122, 78, 28, 0.836); 
+  backdrop-filter: blur(3px);
+  width: 100%;
 }
 
 .nav-links a {
+  color: white;
   margin-top: 8px;
   margin-bottom: 8px;
-  color: rgb(0, 0, 0);
-  font-size: 19px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 510;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #251e12;
+  transform: scale(1.1);
 }
 
 .nav-links {
   display: flex;
   gap: 45px;
 }
+
+.home-main video {
+  will-change: transform;
+}
+
+.home-main::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  animation: pulse 6s ease-in-out infinite;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 0.2; }
+}
+
+.titleMain {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: rgb(44, 41, 41);
+    text-align: left;
+    z-index: 1;
+    gap: 25px;
+
+}
+
+.titleMain h3 {
+  font-size: 20px;
+  text-align: left;
+  font-family: Playwrite Australia QLD;
+}
+
+.titleMain h1 {
+  font-size: 50px;
+  text-align: left;
+  font-family: Archivo Black;
+  font-weight: 900;
+  max-width: 800px;
+}
+
+.titleMain p {
+  text-align: left;
+  font-size: 1.3rem;
+  color: #4b4226; 
+  max-width: 800px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+  text-shadow: 2px 2px 8px rgb(141, 69, 2);
+}
+
+.home-main{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-main video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+
+/* ----------------PROJECTS--------------- */
+.project-header{
+  position: static;
+}
+.card{
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-fixed {
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.custom-btn {
+    background-color: #744c1f; 
+    color: #fff; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #5c3a18; 
+    color: #f2e1c2; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn:hover{
+  transform: translateY(-3px);
+}
+
+.projects-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.projects-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #6e3a3a; 
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.projects-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.projects-subtitle {
+    font-size: 1rem;
+    color: rgba(107, 51, 51, 0.7);
+    margin-top: 10px;
+}
+.custom-cards {
+  display: flex;
+  gap: 2rem;              
+  align-items: flex-start; 
+  flex-wrap: wrap;
+}
+.projects-section {
+  white-space: nowrap;  
+  overflow: hidden;     
+  text-overflow: ellipsis; 
+  width: auto;           
+  min-width: 290px;
+  text-align: center;     
+}
+.project-cards {
+  width: 70%;
+  min-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center; 
+}
+
+.project-card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------------------------ABOUT---------------------------- */
+.about-header{
+  position: static;
+}
+.about-section img{
+  margin-left: 6em;
+}
+
+.about-section {
+  display: flex;
+  gap: 2em;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #3b2f1a;
+  background-color: #f9f7f1;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #6e3a3a;
+}
+
+.about-section p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* -----------------------CONTACT--------------------- */
+.contact-header{
+  position: static;
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: #f9f7f1;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Roboto', sans-serif;
+  color: #3b2f1a;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #6e3a3a;
+}
+.contact-section p{
+  text-align: center;
+}
+
+.contact-form .form-label {
+  font-weight: 600;
+  color: #6e3a3a;
+  margin: 1.5rem auto 0 auto;
+}
+
+.contact-form button {
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  width: 150px; 
+}
+
+.custom-btn {
+  background-color: #744c1f;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #5c3a18;
+}
+
+.direct-contact {
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+}
+
+.direct-contact a {
+  color: #744c1f;      
+  font-size: 2.5rem;    
+  margin: 0 15px;       
+  transition: color 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+.direct-contact a:hover {
+  color: #5c3a18;      
+}
+
+.direct-contact i {
+  vertical-align: middle;
+}
+
+

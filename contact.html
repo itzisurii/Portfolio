@@ -1,32 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/style/styles.css">
     <title>PORTFOLIO | CONTACT</title>
 </head>
+
 <body>
-    <header>
+    <header class="contact-header">
         <nav>
             <div class="nav-container">
                 <a href="index.html">
-                    <img src="/assets/images/logo2.png" alt="aloLOGO" height="90" class="logo">
+                    <img src="/assets/images/logo1.png" alt="aloLOGO" height="90" class="logo">
                 </a>
                 <div class="nav-links">
                     <a href="about.html">ABOUT</a>
-                    <a href="contact.html">CONTACT</a>
                     <a href="projects.html">PROJECT</a>
+                    <a href="contact.html">CONTACT</a>
                 </div>
             </div>
         </nav>
     </header>
+    <section class="contact-section container my-5">
+        <h2>Contact Me</h2>
+        <p>I’d love to hear from you! Whether you have questions, project ideas, or just want to say hi, feel free to
+            get in touch.</p>
 
+        <form id="contactForm" method="POST" class="contact-form">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
 
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="_replyto" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+            </div>
+
+            <button type="submit" class="btn custom-btn">Send Message</button>
+        </form>
+
+        <div class="direct-contact mt-4">
+            <a href="itzisurika08@gmail.com"><i class="fa-solid fa-envelope"></i></a></p>
+            <a href="https://www.linkedin.com/in/isurika-sathsarani-5903aa370" target="_blank"><i class="fa-brands fa-linkedin"></i></a></p>
+            <a href="https://github.com/itzisurii" target="_blank"><i class="fa-brands fa-github"></i></a></p>
+        </div>
+    </section>
 
 
     <script src="/assets/js/app.js"></script>
 </body>
+
 </html>

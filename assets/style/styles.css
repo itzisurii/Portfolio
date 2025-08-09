@@ -353,3 +353,120 @@ header {
 }
 
 
+/* ----------------------FOOTER--------------------- */
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f7f1;
+  padding: 40px 60px;
+  color: #3b2f1a;
+  font-family: 'Roboto', sans-serif;
+  border-top: 2px solid #744c1f;
+}
+
+.footer-middle {
+  max-width: 480px;
+}
+
+.footer-middle h3 {
+  margin: 0 0 15px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #744c1f;
+}
+
+.footer-middle p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.footer-middle form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.footer-middle input[type="email"] {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid #744c1f;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.footer-middle input[type="email"]:focus {
+  border-color: #5c3a18;
+}
+
+.footer-middle button {
+  background-color: #744c1f;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+.footer-middle button:hover {
+  background-color: #5c3a18;
+}
+
+.footer-middle .social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-middle .social-icons a {
+  color: #744c1f;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.footer-middle .social-icons a:hover {
+  color: #5c3a18;
+}
+
+/* Right section */
+.footer-right {
+  max-width: 250px;
+  text-align: left;
+}
+
+.footer-right h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #744c1f;
+}
+
+.footer-right a {
+  display: block;
+  color: #3b2f1a;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #5c3a18;
+  text-decoration: underline;
+}
+
+.footer-logo {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-logo img {
+  max-width: 120px;
+  height: auto;
+  border-radius: 12px;
+  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
+}
+
+
